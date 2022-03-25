@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include 'style.php'?>
+    <?php include 'style2.php'?>
 </head>
 <body>
 <?php include 'menu.php'?>
@@ -54,7 +54,8 @@ $data = $q->fetchAll();
             }
             ?>
   </tbody>
-</table> 
-<?php include 'js.php'?> 
+</table>
+<?php include 'footer.php';?>
+<?php include 'js.php';?>
 </body>
 </html>
