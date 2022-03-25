@@ -2,12 +2,13 @@
 <html lang="fr">
 <head>
     <title>Apprenant</title>
-    <?php include 'style.php'?>                                                
+    <?php include 'style2.php';?>                                                
 </head>
 <body>
+<?php include 'menu.php';?>                                                
 <form>
   <div class="mb-3" >
-    <p>Formulaire des apprenants</p>
+    <h5 class="text-center p-3">FORMULAIRE DES APPRENANTS</h5>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom">
     <div id="emailHelp" class="form-text"></div>
   </div>
@@ -22,16 +23,21 @@
     <input type="teste" class="form-control" id="exampleInputPassword1" placeholder="Adresse">
   </div>
   <select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option selected>Sélectionnez un tuteur</option>
+  <option value="1">un</option>
+  <option value="2">deux</option>
+  <option value="3">trois</option>
+  <option value="4">quatre</option>
+  <option value="5">cinq</option>
 </select>
   
-  <p>Genre: 0Masculin 0Feminin  <button type="submit" class="btn btn-primary">Ajouter</button> 
-  <button type="submit" class="btn btn-primary">Annuler</button> </p>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end p-3">
+  <button class="btn btn-danger me-md-2" type="button">Ajouter</button>
+  <button class="btn btn-danger" type="button">Annuler</button>
+</div>
   
 </form>
+<?php include 'footer.php';?>                                                
 <?php include 'js.php'?>
 </body>
 </html>
