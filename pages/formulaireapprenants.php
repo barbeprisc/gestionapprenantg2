@@ -8,7 +8,7 @@
 <form>
   <div class="mb-3" >
     <p>Formulaire des apprenants</p>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom">
+    <input type="text" class="form-control" id="exampleInputEmail1"aria-describedby="emailHelp" placeholder="Nom">
     <div id="emailHelp" class="form-text"></div>
   </div>
   <div class="mb-3">
