@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>liste_tuteurs</title>
-    <?php include 'style2.php';?>
+    <?php include 'style2.php'?>
 </head>
 <body>
-<?php include 'menu.php';?>
+<?php include 'menu.php'?>
+<h1  class="text-center m-3">LISTE TUTEUR</h1>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+ <a href="../pages/formulaire_tuteurs.php"> <button class="btn btn-danger me-md-2" type="button">NOUVEAU</button> </a>
+</div>
+
 <table class="table">
   <thead>
     <tr>
