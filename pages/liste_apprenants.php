@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>listeapprenants</title>
-    <?php include 'style.php'?> 
+    <?php include 'style2.php';?> 
 </head>
 <body>
+<?php include 'menu.php'?>
+<div><h1 class="text-center p-3">LISTES APPRENANTS</h1></div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a href=""><button class="btn btn-danger me-md-2" type="button">NOUVEAU</button></a>
+</div>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">N°</th>
       <th scope="col">Nom</th>
-      <th scope="col">Prenons</th>
+      <th scope="col">Prenom</th>
       <th scope="col">telephone</th>
       <th scope="col">Adresse</th>
       <th scope="col">Sexe</th>
       <th scope="col">Nom_tuteur</th>
-    </tr>
+  </tr>
     
     <?php
 
 try {
-    // se connecter à mysql
-    $pdo = new PDO("mysql:host=localhost;dbname=bd_apprenants", "root", "");
+  // se connecter à mysql
+  $pdo = new PDO("mysql:host=localhost;dbname=bd_apprenants", "root", "");
 } catch (PDOException $exc) {
-    echo $exc->getMessage();
-    exit();
+  echo $exc->getMessage();
+  exit();
 }
 
 // mysql select query
-$q = $pdo->prepare('SELECT * FROM 	tuteur');
+$q = $pdo->prepare('SELECT * FROM apprenant');
 
 $q->execute();
 $data = $q->fetchAll();
@@ -44,20 +45,21 @@ $data = $q->fetchAll();
             foreach ($data as $donnee) {
             ?>
                 <tr>
-                    <td><?php echo $donnee['id_Tuteur']; ?></td>
+                    <td><?php echo $donnee['codeTuteur']; ?></td>
                     <td><?php echo $donnee['nom']; ?></td>
                     <td><?php echo $donnee['prenom']; ?></td>
                     <td><?php echo $donnee['telephone']; ?></td>
                     <td><?php echo $donnee['adresse']; ?></td>
                     <td><?php echo $donnee['sexe']; ?></td>
-                    <td><?php echo $donnee['nom_tuteur']; ?></td>
+                    <td><?php echo $donnee['profession']; ?></td>
                 </tr>
 
             <?php
             }
             ?>
   </tbody>
-</table> 
-<?php include 'js.php'?> 
+</table>
+<?php include 'footer.php';?>
+<?php include 'js.php';?>
 </body>
 </html>
