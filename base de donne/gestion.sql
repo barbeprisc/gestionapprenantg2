@@ -33,8 +33,7 @@ create table Tuteur
    adresse              varchar(254),
    sexe                 varchar(254),
    email                varchar(254),
-   primary key (codeTuteur),
-   key AK_Identifiant_1 (codeTuteur)
+   primary key (codeTuteur)
 );
 
 alter table Apprenant add constraint FK_association1 foreign key (codeTuteur)

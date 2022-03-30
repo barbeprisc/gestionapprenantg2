@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <title>Logiciel de gestion</title>
     <?php include 'pages/style.php'?>

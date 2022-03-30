@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Tuteur</title>
-    <?php include 'style2.php';?>                                                
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire_Tuteur</title>
+<?php include 'style2.php';?>                                                
 </head>
 <body>
-<?php include 'menu.php';?>                                                
-<form class="container mb-4">
+<?php include 'menu.php';?> 
+<h1 class="text-center m-3">Formulaire des tuteurs</h1>                                               
+<form action="insert.php" method="post" class="container mb-4">
   <div class="mb-3">
-    <h1 class="text-center m-3">Formulaire des tuteurs</h1>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom">
-    <div id="emailHelp" class="form-text"></div>
+    <input type="text" class="form-control" placeholder="Nom" name="nom">
   </div>
   <div class="mb-3">
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Prénom">
+    <input type="text" class="form-control" placeholder="Prénom" name="prenom">
   </div>
   <div class="mb-3">
-    <input type="test" class="form-control" id="exampleInputPassword1" placeholder="Télephone">
+    <input type="text" class="form-control" placeholder="Profession" name="profession">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label"></label>
-    <input type="teste" class="form-control" id="exampleInputPassword1" placeholder="Adresse">
+    <input type="text" class="form-control" placeholder="Télephone" name="telephone">
+  </div>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Adresse" name="adresse">
   </div>
 <div class="mb-3">
-<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option selected>Genre</option>
-  <option value="Homme">Homme</option>
-  <option value="Femme">Femme</option>
-</select>
+<select class="form-select"  aria-label="Default select example" name="sexe">
+  <option selected > Sexe </option>
+  <option value="Masculin">Masculin</option>
+  <option value="Feminin">Feminin</option>
 </div>
+<div class="mb-3">
+    <input type="text" class="form-control" placeholder="email" name="email">
+  </div>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a href=""><button class="btn btn-danger me-md-2" type="button">Ajouter</button></a>
-  <a href=""><button class="btn btn-danger" type="button">Annuler</button></a>
+<button type="submit" class="btn btn-danger me-md-2 " name="ajouter" type="button">Ajouter</button>
+<button type="reset" class="btn btn-danger " type="button">Annuler</button>
 </div>
 </form>
 <?php include 'footer.php';?>
