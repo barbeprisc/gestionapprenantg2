@@ -3,38 +3,33 @@ drop table if exists Apprenant;
 drop table if exists Tuteur;
 
 /*==============================================================*/
-/* Table : Apprenant                                            */
+/* Table: Apprenant                                             */
 /*==============================================================*/
 create table Apprenant
 (
-   codeApprenant        int not null,
+   codeApp              int not null,
    codeTuteur           int not null,
    nom                  varchar(254),
    prenom               varchar(254),
-   profession           varchar(254),
-   telephone            int,
    adresse              varchar(254),
-   sexe                 varchar(254),
-   email                varchar(254),
-   detail               varchar(254),
-   primary key (codeApprenant)
+   phone                int,
+   genre                varchar(254),
+   primary key (codeApp)
 );
 
 /*==============================================================*/
-/* Table : Tuteur                                               */
+/* Table: Tuteur                                                */
 /*==============================================================*/
 create table Tuteur
 (
    codeTuteur           int not null,
-   nom                  varchar(254),
-   prenom               varchar(254),
+   nomTuteur            varchar(254),
+   prenomTuteur         varchar(254),
+   adresseTuteur        varchar(254),
+   phoneTuteur          int,
+   genre                varchar(254),
    profession           varchar(254),
-   telephone            int,
-   adresse              varchar(254),
-   sexe                 varchar(254),
-   email                varchar(254),
-   primary key (codeTuteur),
-   key AK_Identifiant_1 (codeTuteur)
+   primary key (codeTuteur)
 );
 
 alter table Apprenant add constraint FK_association1 foreign key (codeTuteur)
