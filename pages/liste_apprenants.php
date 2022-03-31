@@ -8,21 +8,22 @@
     <?php include 'style2.php';?>
 </head>
 <body>
-<?php include 'menu.php';?> 
+<?php include 'menu2.php';?> 
 <h1 class="text-center">LISTE DES APPRENANTS</h1>
 <div class="container-fluid">
 <table class="table table bordered border-dark">
-<thead class="table-success">
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a href="formulaire_apprenants.php">
+  <button type="submit" class="btn btn-danger me-md-2 " name="ajouter" type="button">Nouveau</button>
+  </a>
+</div>
     <tr>
         <td>N°</td>
         <td>Nom </td>
         <td>Prenom</td>
-        <td>Profession</td>
+        <td>adresse</td>
         <td>Telephone</td>
-        <td>Adresse</td>
         <td>Sexe</td>
-        <td>Email</td>
-        <td>Detail</td>
     </tr>
   </thead>
   <tbody > 
@@ -31,7 +32,7 @@
   try {
 
   // se connecter à mysql
-  $pdo = new PDO("mysql:host=localhost;dbname=bd_apprenants","root","");
+  $pdo = new PDO("mysql:host=localhost;dbname=groupe2","root","");
 
   $sql = $pdo->query('SELECT * FROM Apprenant ORDER BY nom ASC');
   $i = 0;
@@ -45,12 +46,9 @@
   echo "<td> $i </td>";
   echo "<td> $donnees[nom] </td>";
   echo "<td> $donnees[prenom] </td>";
-  echo "<td> $donnees[profession] </td>";
-  echo "<td> $donnees[telephone] </td>";
   echo "<td> $donnees[adresse] </td>";
+  echo "<td> $donnees[telephone] </td>";
   echo "<td> $donnees[sexe] </td>";
-  echo "<td> $donnees[email] </td>";
-  echo "<td> $donnees[detail] </td>";
   echo "</tr>";
   }
   $sql->closeCursor();
@@ -61,14 +59,6 @@
   </tr>
   </tbody>
 </table> <br>
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a href="formulaire_apprenants.php">
-  <button type="submit" class="btn btn-danger me-md-2 " name="ajouter" type="button">Nouveau</button>
-  </a>
-  <a href="javascript:window.print()">
-  <button class="btn btn-danger " type="button">Imprimer</button>
-  </a>
-</div>
 </div> 
 <br>
 <?php include 'footer.php';?>

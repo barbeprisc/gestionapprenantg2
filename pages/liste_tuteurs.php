@@ -8,31 +8,23 @@
     <?php include 'style2.php';?>
 </head>
 <body>
-<<<<<<< HEAD
-<?php include 'menu.php'?>
+<?php include 'menu2.php'?>
 <h1  class="text-center m-3">LISTE TUTEUR</h1>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
- <a href="pages/formulaire_tuteurs.php"> <button class="btn btn-danger me-md-2" type="button">NOUVEAU</button> </a>
+ <a href="formulaire_tuteur.php"> <button class="btn btn-danger me-md-2" type="button">NOUVEAU</button> </a>
 </div>
 
 <table class="table">
   <thead>
-=======
-<?php include 'menu.php';?>  
-      <h1 class="text-center">LISTE DES TUTEURS</h1>
-      <div class="container-fluid">
-      <table class="table table bordered ">
-  <thead class="table-success">
->>>>>>> c6ea373f6a105b15b1d3b9f48c1984d67a0edfe2
     <tr>
     <td>N°</td>
     <td>Nom </td>
     <td>Prenom</td>
-    <td>Profession</td>
-    <td>Telephone</td>
     <td>Adresse</td>
+    <td>Telephone</td>
+    <td></td>
     <td>Sexe</td>
-    <td>Email</td>
+    <td>Profession</td>
     </tr>
   </thead>
   
@@ -40,7 +32,7 @@
 
 try {
     // se connecter à mysql
-    $pdo = new PDO("mysql:host=localhost;dbname=bd_apprenants", "root", "");
+    $pdo = new PDO("mysql:host=localhost;dbname=groupe2", "root", "");
 } catch (PDOException $exc) {
     echo $exc->getMessage();
     exit();
@@ -62,26 +54,19 @@ foreach ($data as $donnee) {
         <td> <?php echo $donnee['codeTuteur']; ?></td>
         <td> <?php echo $donnee['nom']; ?></td>
         <td> <?php echo $donnee['prenom']; ?></td>
-        <td> <?php echo $donnee['profession']; ?></td>
-        <td> <?php echo $donnee['telephone']; ?></td>
         <td> <?php echo $donnee['adresse']; ?></td>
+        <td> <?php echo $donnee['telephone']; ?></td>
         <td> <?php echo $donnee['sexe']; ?></td>
-        <td> <?php echo $donnee['email']; ?></td>
+        <td> <?php echo $donnee['Profession']; ?></td>
     </tr>
     <?php
             }
             ?>
   </tbody>
 </table> <br>
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a href="Formulaire_tuteur.php">
-  <button type="submit" class="btn btn-danger me-md-2 " name="ajouter" type="button">Nouveau</button>
-  </a>
-  <a href="javascript:window.print()">
-  <button class="btn btn-danger " type="button">Imprimer</button>
-  </a> 
  
-</div> 
+ 
+ </div> 
 </div>
 <br>
 

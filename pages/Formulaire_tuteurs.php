@@ -8,23 +8,20 @@
 <?php include 'style2.php';?>                                                
 </head>
 <body>
-<?php include 'menu.php';?> 
+<?php include 'menu2.php';?> 
 <h1 class="text-center m-3">Formulaire des tuteurs</h1>                                               
-<form action="insert.php" method="post" class="container mb-4">
+<form action="insert_tuteur.php" method="post" class="container mb-4">
   <div class="mb-3">
     <input type="text" class="form-control" placeholder="Nom" name="nom">
   </div>
   <div class="mb-3">
-    <input type="text" class="form-control" placeholder="Prénom" name="prenom">
-  </div>
-  <div class="mb-3">
-    <input type="text" class="form-control" placeholder="Profession" name="profession">
-  </div>
-  <div class="mb-3">
-    <input type="text" class="form-control" placeholder="Télephone" name="telephone">
+    <input type="text" class="form-control" placeholder="Prenom" name="prenom">
   </div>
   <div class="mb-3">
     <input type="text" class="form-control" placeholder="Adresse" name="adresse">
+  </div>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Télephone" name="telephone">
   </div>
 <div class="mb-3">
 <select class="form-select"  aria-label="Default select example" name="sexe">
@@ -33,7 +30,7 @@
   <option value="Feminin">Feminin</option>
 </div>
 <div class="mb-3">
-    <input type="text" class="form-control" placeholder="email" name="email">
+    <input type="text" class="form-control" placeholder="Profession" name="Profession">
   </div>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 <button type="submit" class="btn btn-danger me-md-2 " name="ajouter" type="button">Ajouter</button>
