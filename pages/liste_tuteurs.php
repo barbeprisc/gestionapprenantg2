@@ -9,9 +9,9 @@
 </head>
 <body>
 <?php include 'menu2.php'?>
-<h1  class="text-center m-3">LISTE TUTEUR</h1>
+<h1  class="text-center p-3">LISTE TUTEUR</h1>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
- <a href="formulaire_tuteur.php"> <button class="btn btn-danger me-md-2" type="button">NOUVEAU</button> </a>
+ <a href="formulaire_tuteurs.php"> <button class="btn btn-danger me-md-2" type="button">NOUVEAU</button> </a>
 </div>
 
 <table class="table">
@@ -57,7 +57,7 @@ foreach ($data as $donnee) {
         <td> <?php echo $donnee['adresse']; ?></td>
         <td> <?php echo $donnee['telephone']; ?></td>
         <td> <?php echo $donnee['sexe']; ?></td>
-        <td> <?php echo $donnee['Profession']; ?></td>
+        <td> <?php echo $donnee['profession']; ?></td>
     </tr>
     <?php
             }

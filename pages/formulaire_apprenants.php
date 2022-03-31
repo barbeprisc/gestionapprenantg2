@@ -29,18 +29,16 @@
     <input type="" class="form-control" placeholder="Telephone" name="telephone">
   </div>
   <div class="mb-3">
-  <select class="form-select"  aria-label="Default select example" name="sexe">
+<select class="form-select"  aria-label="Default select example" name="sexe">
   <option selected > Sexe </option>
-  <option value="Masculin">Masculin</option>
-  <option value="Feminin">Feminin</option>
-  </div>
+  <option value="masculin">Masculin</option>
+  <option value="feminin">Feminin</option>
+</div>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button type="submit" class="btn btn-danger me-md-2 " name="ajouter" type="button">Ajouter</button>
-  <button type="reset" class="btn btn-danger " type="button">Annuler</button>
+<button type="submit" class="btn btn-danger me-md-2 " name="ajouter" type="button">Ajouter</button>
+<button type="reset" class="btn btn-danger " type="button">Annuler</button>
 </div>
-</form>
-</div>
-<br>  
+</form> <br>
 <?php include 'footer.php';?>
 <?php include 'js.php';?>
 </body>

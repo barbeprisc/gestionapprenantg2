@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php include 'menu2.php';?> 
-<h1 class="text-center">LISTE DES APPRENANTS</h1>
+<h1 class="text-center p-3">LISTE DES APPRENANTS</h1>
 <div class="container-fluid">
 <table class="table table bordered border-dark">
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">

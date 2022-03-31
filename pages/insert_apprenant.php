@@ -14,14 +14,14 @@ if(isset($_POST['ajouter'])){
   // récupérer les valeurs 
   $nom = $_POST['nom'];
   $prenom = $_POST['prenom'];
-  $profession = $_POST['adresse'];
+  $adresse = $_POST['adresse'];
   $telephone = $_POST['telephone'];
-  $adresse = $_POST['sexe'];
+  $sexe = $_POST['sexe'];
 
   // Requête mysql pour insérer des données
-  $sql = "INSERT INTO `Apprenant`(`nom`, `prenom`, `adresse`, `telephone`, `sexe`,) VALUES (:nom,:prenom,:adresse,:telephone,:sexe,)";
+  $sql = "INSERT INTO `apprenant`(`nom`, `prenom`, `adresse`, `telephone`, `sexe`,) VALUES (:nom,:prenom,:adresse,:telephone,:sexe,)";
   $res = $pdo->prepare($sql);
-  $exec = $res->execute(array(":nom"=>$nom,":prenom"=>$prenom,":adresse"=>$adresse,":telephone"=>$telephone,":sexe"=>$sexe,));
+  $exec = $res->execute(array(":nom"=>$nom,":prenom"=>$prenom,":adresse"=>$adresse,":telephone"=>$telephone,":sexe"=>$sexe));
 
   // vérifier si la requête d'insertion a réussi
   if($exec){

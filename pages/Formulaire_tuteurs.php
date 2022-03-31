@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php include 'menu2.php';?> 
-<h1 class="text-center m-3">Formulaire des tuteurs</h1>                                               
+<h1 class="text-center m-3">FORMULAIRE TUTEUR</h1>                                               
 <form action="insert_tuteur.php" method="post" class="container mb-4">
   <div class="mb-3">
     <input type="text" class="form-control" placeholder="Nom" name="nom">
@@ -26,11 +26,11 @@
 <div class="mb-3">
 <select class="form-select"  aria-label="Default select example" name="sexe">
   <option selected > Sexe </option>
-  <option value="Masculin">Masculin</option>
-  <option value="Feminin">Feminin</option>
+  <option value="masculin">Masculin</option>
+  <option value="feminin">Feminin</option>
 </div>
 <div class="mb-3">
-    <input type="text" class="form-control" placeholder="Profession" name="Profession">
+    <input type="text" class="form-control" placeholder="Profession" name="profession">
   </div>
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 <button type="submit" class="btn btn-danger me-md-2 " name="ajouter" type="button">Ajouter</button>

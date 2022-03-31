@@ -1,11 +1,11 @@
-drop table if exists Apprenant;
+drop table if exists apprenant;
 
-drop table if exists Tuteur;
+drop table if exists tuteur;
 
 /*==============================================================*/
 /* Table: Apprenant                                             */
 /*==============================================================*/
-create table Apprenant
+create table apprenant
 (
    codeApp              int not null,
    codeTuteur           int not null,
@@ -20,7 +20,7 @@ create table Apprenant
 /*==============================================================*/
 /* Table: Tuteur                                                */
 /*==============================================================*/
-create table Tuteur
+create table tuteur
 (
    codeTuteur           int not null,
    nom                  varchar(254),
