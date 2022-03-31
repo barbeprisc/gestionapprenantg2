@@ -29,6 +29,13 @@ create table Tuteur
    phoneTuteur          int,
    genre                varchar(254),
    profession           varchar(254),
+<<<<<<< HEAD:Base de donnée/gestion.sql
+=======
+   telephone            int,
+   adresse              varchar(254),
+   sexe                 varchar(254),
+   email                varchar(254),
+>>>>>>> c6ea373f6a105b15b1d3b9f48c1984d67a0edfe2:base de donne/gestion.sql
    primary key (codeTuteur)
 );
 
